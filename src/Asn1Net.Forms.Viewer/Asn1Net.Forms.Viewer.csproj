@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4B40F5F-D83D-471B-8B26-DCB54DEB25A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Net.Asn1.Forms.Viewer</RootNamespace>
+    <AssemblyName>Asn1Net.Forms.Viewer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bricks.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Asn1Net.Forms.TreeView">
+      <HintPath>..\packages\Asn1Net.Forms.TreeView.1.0.0.0\lib\net40\Asn1Net.Forms.TreeView.dll</HintPath>
+    </Reference>
+    <Reference Include="Asn1Net.Reader">
+      <HintPath>..\packages\Asn1Net.Reader.1.0.0.1\lib\net40\Asn1Net.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Asn1Net.Forms.Viewer.licenseheader" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bricks.ico" />
+    <Content Include="Icons\01_Boolean.ico" />
+    <Content Include="Icons\02_Integer.ico" />
+    <Content Include="Icons\03_BitString.ico" />
+    <Content Include="Icons\04_OctetString.ico" />
+    <Content Include="Icons\05_Null.ico" />
+    <Content Include="Icons\06_ObjectIdentifier.ico" />
+    <Content Include="Icons\07_ObjectDescriptor.ico" />
+    <Content Include="Icons\08_External.ico" />
+    <Content Include="Icons\09_Real.ico" />
+    <Content Include="Icons\10_Enumerated.ico" />
+    <Content Include="Icons\11_EmbeddedPdv.ico" />
+    <Content Include="Icons\12_Utf8String.ico" />
+    <Content Include="Icons\13_RelativeOid.ico" />
+    <Content Include="Icons\16_Sequence.ico" />
+    <Content Include="Icons\17_Set.ico" />
+    <Content Include="Icons\18_NumericString.ico" />
+    <Content Include="Icons\19_PrintableString.ico" />
+    <Content Include="Icons\20_T61String.ico" />
+    <Content Include="Icons\21_VideotexString.ico" />
+    <Content Include="Icons\22_Ia5String.ico" />
+    <Content Include="Icons\23_UtcTime.ico" />
+    <Content Include="Icons\24_GeneralizedTime.ico" />
+    <Content Include="Icons\25_GraphicString.ico" />
+    <Content Include="Icons\26_VisibleString.ico" />
+    <Content Include="Icons\27_GeneralString.ico" />
+    <Content Include="Icons\28_UniversalString.ico" />
+    <Content Include="Icons\29_CharacterString.ico" />
+    <Content Include="Icons\30_BmpString.ico" />
+    <Content Include="Icons\31_LongForm.ico" />
+    <Content Include="Icons\ContextSpecific.ico" />
+    <Content Include="Icons\Other.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
