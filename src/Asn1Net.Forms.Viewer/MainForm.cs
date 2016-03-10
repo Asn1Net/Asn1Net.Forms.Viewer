@@ -13,6 +13,7 @@
  */
 
 using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -22,6 +23,15 @@ namespace Net.Asn1.Forms.Viewer
     {
         public MainForm()
         {
+            // Set the default dialog font on each child control
+            foreach (Control c in Controls)
+            {
+                c.Font = SystemFonts.MessageBoxFont;
+            }
+
+            // Use a larger, bold version of the default dialog font for one control
+            //this.label1.Font = new Font(SystemFonts.MessageBoxFont.Name, 12f, FontStyle.Bold, GraphicsUnit.Point);
+
             InitializeComponent();
 
             asn1TreeView1.ReadContent = tsReadContent.Checked;
@@ -40,7 +50,9 @@ namespace Net.Asn1.Forms.Viewer
             var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
             toolStripLabelSize.Text = String.Format("Size: {0} bytes", fs.Length);
 
+            asn1TreeView1.BeginUpdate();
             asn1TreeView1.LoadContent(fs);
+            asn1TreeView1.EndUpdate();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

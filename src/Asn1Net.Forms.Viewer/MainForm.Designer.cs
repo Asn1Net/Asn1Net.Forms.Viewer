@@ -63,7 +63,8 @@
             this.helpToolStripMenuItem});
             this.mainMennu.Location = new System.Drawing.Point(0, 0);
             this.mainMennu.Name = "mainMennu";
-            this.mainMennu.Size = new System.Drawing.Size(786, 24);
+            this.mainMennu.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.mainMennu.Size = new System.Drawing.Size(917, 24);
             this.mainMennu.TabIndex = 0;
             this.mainMennu.Text = "mainMenu";
             // 
@@ -110,9 +111,10 @@
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabeFileName,
             this.toolStripLabelSize});
-            this.statusBar.Location = new System.Drawing.Point(0, 489);
+            this.statusBar.Location = new System.Drawing.Point(0, 646);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(786, 24);
+            this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 17, 0);
+            this.statusBar.Size = new System.Drawing.Size(917, 24);
             this.statusBar.TabIndex = 1;
             this.statusBar.Text = "statusBar";
             // 
@@ -120,7 +122,7 @@
             // 
             this.toolStripLabeFileName.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripLabeFileName.Name = "toolStripLabeFileName";
-            this.toolStripLabeFileName.Size = new System.Drawing.Size(670, 19);
+            this.toolStripLabeFileName.Size = new System.Drawing.Size(927, 19);
             this.toolStripLabeFileName.Spring = true;
             // 
             // toolStripLabelSize
@@ -136,8 +138,9 @@
             this.mainPanel.Controls.Add(this.toolStrip1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 24);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(786, 465);
+            this.mainPanel.Size = new System.Drawing.Size(917, 622);
             this.mainPanel.TabIndex = 2;
             // 
             // pMainBody
@@ -145,8 +148,9 @@
             this.pMainBody.Controls.Add(this.asn1TreeView1);
             this.pMainBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pMainBody.Location = new System.Drawing.Point(0, 25);
+            this.pMainBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pMainBody.Name = "pMainBody";
-            this.pMainBody.Size = new System.Drawing.Size(786, 440);
+            this.pMainBody.Size = new System.Drawing.Size(917, 597);
             this.pMainBody.TabIndex = 2;
             // 
             // asn1TreeView1
@@ -156,10 +160,11 @@
             this.asn1TreeView1.ImageIndex = 0;
             this.asn1TreeView1.ImageList = this.Asn1Icons;
             this.asn1TreeView1.Location = new System.Drawing.Point(0, 0);
+            this.asn1TreeView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.asn1TreeView1.Name = "asn1TreeView1";
             this.asn1TreeView1.ReadContent = false;
             this.asn1TreeView1.SelectedImageIndex = 0;
-            this.asn1TreeView1.Size = new System.Drawing.Size(786, 440);
+            this.asn1TreeView1.Size = new System.Drawing.Size(917, 597);
             this.asn1TreeView1.TabIndex = 0;
             // 
             // Asn1Icons
@@ -209,7 +214,7 @@
             this.tsParseEncapsulatedData});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(786, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(917, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -260,14 +265,16 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 513);
+            this.ClientSize = new System.Drawing.Size(917, 670);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.mainMennu);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMennu;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Asn1Viewer";
             this.mainMennu.ResumeLayout(false);
