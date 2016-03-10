@@ -14,6 +14,7 @@ setlocal
 set cur_dir=%CD%
 call %devenv% || exit /b 1
 set SLNPATH=src\Asn1Net.Forms.Viewer.sln
+set ILMerge=src\packages\ILMerge.2.14.1208\tools\ILMerge.exe
 
 
 IF EXIST .nuget\nuget.exe goto restore
@@ -39,10 +40,13 @@ set SRCDIR=src\Asn1Net.Forms.Viewer\bin\Release
 rmdir /S /Q %OUTDIR%
 mkdir %OUTDIR% || exit /b 1
 
+@rem ilmerge exe and dlls
+%ILMerge% /wildcards /ndebug /out:%OUTDIR%Asn1Net.Forms.Viewer.exe %SRCDIR%\Asn1Net.Forms.Viewer.exe %SRCDIR%\*.dll
+
 @rem copy files to output directory
-copy %SRCDIR%\*.exe %OUTDIR% || exit /b 1
-copy %SRCDIR%\*.dll %OUTDIR% || exit /b 1
-copy %SRCDIR%\*.xml %OUTDIR% || exit /b 1
+@rem copy %SRCDIR%\*.exe %OUTDIR% || exit /b 1
+@rem copy %SRCDIR%\*.dll %OUTDIR% || exit /b 1
+@rem copy %SRCDIR%\*.xml %OUTDIR% || exit /b 1
 
 @rem set license variables
 set LICENSEDIR=%OUTDIR%\License
